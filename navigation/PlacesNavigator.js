@@ -2,7 +2,7 @@ import { Platform } from "react-native";
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 
-import PlaceListScreen from "../screens/PlacesListScreen";
+import PlacesListScreen from "../screens/PlacesListScreen";
 import PlaceDetailScreen from "../screens/PlaceDetailScreen";
 import NewPlaceScreen from "../screens/NewPlaceScreen";
 import MapScreen from "../screens/MapScreen";
@@ -10,7 +10,7 @@ import Colors from "../constants/Colors";
 
 const PlacesNavigator = createStackNavigator(
   {
-    Places: PlaceListScreen,
+    Places: PlacesListScreen,
     PlaceDetail: PlaceDetailScreen,
     NewPlace: NewPlaceScreen,
     Map: MapScreen,
@@ -25,5 +25,4 @@ const PlacesNavigator = createStackNavigator(
   }
 );
 
-
-export default createAppContainer(PlacesNavigator)
+export default createAppContainer(PlacesNavigator);

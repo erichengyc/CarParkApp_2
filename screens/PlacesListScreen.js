@@ -1,8 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet, Platform } from "react-native";
-import { HeaderButton, Item } from "react-navigation-header-buttons";
+import { HeaderButtons, Item } from "react-navigation-header-buttons";
 
-import CustomHeaderButton from "../components/HeaderButton";
+import HeaderButton from "../components/HeaderButton";
 
 const PlacesListScreen = (props) => {
   return (
@@ -14,9 +14,9 @@ const PlacesListScreen = (props) => {
 
 PlacesListScreen.navigationOptions = (navData) => {
   return {
-    heaederTitle: "All Places",
+    headerTitle: "All Places",
     headerRight: (
-      <HeaderButton HeaderButtonComponent={HeaderButton}>
+      <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
           title="Add Place"
           iconName={Platform.OS === "android" ? "md-add" : "ios-add"}
@@ -24,7 +24,7 @@ PlacesListScreen.navigationOptions = (navData) => {
             navData.navigation.navigate("NewPlace");
           }}
         />
-      </HeaderButton>
+      </HeaderButtons>
     ),
   };
 };
