@@ -2,16 +2,16 @@ import { ADD_PLACE } from "./places-actions";
 import Place from "../models/place";
 
 const initialState = {
-  place: [],
+  places: [],
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
     case ADD_PLACE:
-        const newPlace = newPlace(new Date().toString(), action.placeDate.title);
-        return {
-            places: state.place.concat(newPlace)
-        };
+      const newPlace = new Place(new Date().toString(), action.placeData.title);
+      return {
+        places: state.places.concat(newPlace),
+      };
     default:
       return state;
   }
