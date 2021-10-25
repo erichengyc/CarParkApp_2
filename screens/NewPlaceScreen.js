@@ -11,7 +11,7 @@ import { useDispatch } from "react-redux";
 
 import Colors from "../constants/Colors";
 import * as placesActions from "../store/places-actions";
-import ImgPicker from "../components/ImagePicker";
+import ImagePicker from "../components/ImagePicker";
 
 const NewPlaceScreen = (props) => {
   const [titleValue, setTitleValue] = useState("");
@@ -19,6 +19,7 @@ const NewPlaceScreen = (props) => {
   const dispatch = useDispatch();
 
   const titleChangeHandler = (text) => {
+    // you could add validation
     setTitleValue(text);
   };
 
